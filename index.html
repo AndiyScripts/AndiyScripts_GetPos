@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="myInput">
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.data.type == "Copy") {
+        document.body.style.display = "block";
+        var copyText = document.getElementById("myInput");
+        copyText.value = event.data.txt;
+        copyText.select();
+        document.execCommand("copy");
+        document.body.style.display = "none";
+      }
+    })
+  </script>
+</body>
+</html>
