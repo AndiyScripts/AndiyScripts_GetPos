@@ -7,3 +7,5 @@ Get position copied to your clipboard either from a ox_lib menu trigger by a com
 >
 > ox_lib
 > ESX Legacy
+
+> [AndiyScirpts Discord](https://discord.gg/Cx9PC6QmNW)
