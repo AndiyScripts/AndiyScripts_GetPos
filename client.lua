@@ -1,7 +1,7 @@
 RegisterNetEvent('AndiyScripts_GetPos:GetLocationOfPositionAndCopyNotUseMenu')
 AddEventHandler('AndiyScripts_GetPos:GetLocationOfPositionAndCopyNotUseMenu', function(data)
-  local plyPos = ESX.PlayerData.coords
-  local plyHead = GetEntityHeading(ESX.PlayerData.ped)
+  local plyPos = GetEntityCoords(cache.ped)
+  local plyHead = GetEntityHeading(cache.ped)
   local DoneText = ''
   if data.type == 'v1' or data == 'v1' then
     DoneText = "vector3("..plyPos.x..", "..plyPos.y..", "..plyPos.z..")"
@@ -30,12 +30,13 @@ AddEventHandler('AndiyScripts_GetPos:GetLocationOfPositionAndCopyNotUseMenu', fu
   end
 
   if DoneText ~= '' then
-    print('here')
-    ESX.ShowNotification("Copied "..DoneText.."", 'success', 5000)
-    SendNUIMessage({
-      type = "Copy",
-      txt  = DoneText
+    lib.notify({
+      title = 'Copied',
+      description = DoneText,
+      position = 'top',
+      type = 'success'
     })
+    lib.setClipboard(DoneText)
     DoneText = ''
   end
 end)

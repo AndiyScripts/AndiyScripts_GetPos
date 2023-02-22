@@ -1,6 +1,6 @@
 AndiyScripts = {}
 
-AndiyScripts.Use_Menu = true
+AndiyScripts.Use_Menu = false
 
 AndiyScripts.CommandMenu = {-- if Use_Menu = true then
     ['commandmenu'] = {
