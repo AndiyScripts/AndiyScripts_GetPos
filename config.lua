@@ -2,6 +2,8 @@ AndiyScripts = {}
 
 AndiyScripts.Use_Menu = false
 
+AndiyScripts.Use_OX_Lib_V3 = false
+
 AndiyScripts.CommandMenu = {-- if Use_Menu = true then
     ['commandmenu'] = {
         permission = 'admin',
